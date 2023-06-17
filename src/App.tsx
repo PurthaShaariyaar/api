@@ -1,12 +1,16 @@
 import './App.css'
 import CharacterList from './pages/CharactersList'
+import Charater from './pages/Character';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <div>
-      <h1>Test</h1>
-      <CharacterList />
+      <Routes>
+        <Route path='/' element={<CharacterList />} />
+        <Route path='/:id' element={<Charater />} />
+      </Routes>
     </div>
   )
 }
